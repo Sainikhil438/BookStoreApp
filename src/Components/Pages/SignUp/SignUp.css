@@ -1,0 +1,123 @@
+.container-1{
+    background-color: rgba(128, 128, 128, 0.734);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pic-container{
+    background-color: #f8f6f6;
+    border-radius: 25px;
+    width: 24vw;
+    height: 53vh;
+    margin-top: 45vh;
+    margin-bottom: 45vh;
+}
+.image{
+    margin-top: 20px;
+    width: 18vw;
+    height: 40vh;
+}
+.container-2{
+    position: relative;
+    right: 2vw;
+    background-color: white;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height:65vh;
+    width:25vw;
+    box-shadow: white;
+    border-radius: 7px;
+    
+}
+.container-3{
+    /* background-color: blue; */
+     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 3vh;
+    height:9vh;
+    
+}
+.container-4{
+    /* background-color: green; */
+    height:75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.logintext{
+    font-weight: bold;
+    font-size: 1.35rem;
+}
+.signuptext{
+    font-weight: bold;
+    font-size: 1.35rem;
+}
+.button{
+    /* background-color: rgba(189, 14, 14, 0.715); */
+    background-color: #a03037;
+    color: white;
+    width: 20vw;
+    height: 6vh;
+    padding: 1vw;
+    margin:2vw;
+    margin-bottom: 5vh;
+    border-radius: 5px;
+}
+.tfield{
+    width:20vw;
+    margin-top: 2vh;
+    /* height:8vh; */
+}
+.login{
+    text-decoration: none;
+    
+}
+.signup{
+
+    text-decoration: none;
+    /* display: flex;
+    justify-content: center; */
+}
+.label1{
+    display: flex;
+    /* margin-Right: 15vw; */
+    margin-top: 2vh;
+}
+.label2{
+    margin-Right: 16vw;
+    margin-top: 2vh;
+}
+.label3{
+    margin-Right: 15vw;
+    margin-top: 2vh;
+}
+.label4{
+    margin-Right: 12vw;
+    margin-top: 2vh;
+}
+#fullname{
+    /* background-color: green; */
+    height:1.5vh;
+}
+#email{
+    height:1.5vh;
+}
+#password{
+    height:1.5vh;
+}
+#mobile{
+    height:1.5vh;
+}
+
+@media (min-width:500px) and (max-width:600px){
+    .pic-container{
+        display: none;
+    }
+}
