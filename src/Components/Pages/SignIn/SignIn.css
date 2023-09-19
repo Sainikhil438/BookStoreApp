@@ -1,4 +1,4 @@
-.lcontainer-1{
+.login-container-1{
     background-color: rgba(128, 128, 128, 0.734);
     height: 100vh;
     width: 100vw;
@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
 }
-.lcontainer-2{
+.login-container-2{
     position: relative;
     right: 2vw;
     background-color: white;
@@ -20,7 +20,7 @@
     border-radius: 7px;
     
 }
-.l-pic-container{
+.login-pic-container{
     background-color: #f8f6f6;
     border-radius: 25px;
     width: 24vw;
@@ -28,12 +28,12 @@
     margin-top: 45vh;
     margin-bottom: 45vh;
 }
-.l-image{
+.login-image{
     margin-top: 20px;
     width: 18vw;
     height: 40vh;
 }
-.lcontainer-3{
+.login-container-3{
     /* background-color: blue; */
      display: flex;
     flex-direction: row;
@@ -43,7 +43,7 @@
     height:9vh;
     
 }
-.lcontainer-4{
+.login-container-4{
     /* background-color: green; */
     height:75vh;
     display: flex;
@@ -51,14 +51,14 @@
     align-items: center;
     justify-content: space-around;
 }
-.lcontainer-5{
-    /* background-color: aqua; */
+/* .lcontainer-5{
+    background-color: aqua;
     height: 35%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-}
+} */
 .forgotpass{
     /* background-color: yellow; */
     height:3vh;
@@ -85,12 +85,12 @@
     margin-bottom: 5vh;
     border-radius: 5px;
 }
-.lfield{
+.login-field{
     width:20vw;
     margin-top: 2vh;
     /* height:8vh; */
 }
-.lbuttons{
+.login-extra-buttons{
     /* background-color: grey; */
     color: white;
     width: 20vw;

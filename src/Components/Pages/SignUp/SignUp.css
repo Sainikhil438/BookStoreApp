@@ -1,4 +1,4 @@
-.container-1{
+.signup-container-1{
     background-color: rgba(128, 128, 128, 0.734);
     height: 100vh;
     width: 100vw;
@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
 }
-.pic-container{
+.signup-pic-container{
     background-color: #f8f6f6;
     border-radius: 25px;
     width: 24vw;
@@ -14,12 +14,12 @@
     margin-top: 45vh;
     margin-bottom: 45vh;
 }
-.image{
+.signup-image{
     margin-top: 20px;
     width: 18vw;
     height: 40vh;
 }
-.container-2{
+.signup-container-2{
     position: relative;
     right: 2vw;
     background-color: white;
@@ -33,7 +33,7 @@
     border-radius: 7px;
     
 }
-.container-3{
+.signup-container-3{
     /* background-color: blue; */
      display: flex;
     flex-direction: row;
@@ -43,7 +43,7 @@
     height:9vh;
     
 }
-.container-4{
+.signup-container-4{
     /* background-color: green; */
     height:75vh;
     display: flex;
@@ -51,15 +51,15 @@
     align-items: center;
     justify-content: space-around;
 }
-.logintext{
+.signup-logintext{
     font-weight: bold;
     font-size: 1.35rem;
 }
-.signuptext{
+.signup-text{
     font-weight: bold;
     font-size: 1.35rem;
 }
-.button{
+.signup-login-button{
     /* background-color: rgba(189, 14, 14, 0.715); */
     background-color: #a03037;
     color: white;
@@ -70,7 +70,7 @@
     margin-bottom: 5vh;
     border-radius: 5px;
 }
-.tfield{
+.signup-tfield{
     width:20vw;
     margin-top: 2vh;
     /* height:8vh; */
@@ -85,34 +85,34 @@
     /* display: flex;
     justify-content: center; */
 }
-.label1{
+.signup-label1{
     display: flex;
-    /* margin-Right: 15vw; */
-    margin-top: 2vh;
-}
-.label2{
-    margin-Right: 16vw;
-    margin-top: 2vh;
-}
-.label3{
     margin-Right: 15vw;
     margin-top: 2vh;
 }
-.label4{
+.signup-label2{
+    margin-Right: 16vw;
+    margin-top: 2vh;
+}
+.signup-label3{
+    margin-Right: 15vw;
+    margin-top: 2vh;
+}
+.signup-label4{
     margin-Right: 12vw;
     margin-top: 2vh;
 }
-#fullname{
+#signup-fullname{
     /* background-color: green; */
     height:1.5vh;
 }
-#email{
+#signup-email{
     height:1.5vh;
 }
-#password{
+#signup-password{
     height:1.5vh;
 }
-#mobile{
+#signup-mobile{
     height:1.5vh;
 }
 

@@ -7,46 +7,62 @@ import BookStoreLogo from "../../images/BookStoreLogo.png";
 
 
 class SignUp extends Component {
+    constructor(props){
+        super(props)
+
+        this.state = {
+            fullname:"",
+            email:"",
+            password:"",
+            number:""
+        }
+
+        const handleButton = () =>
+        {
+            return "sai";
+        }
+    }
     render() {
         return (
-            <div className="container-1">
-                <div className="pic-container">
-                    <img className="image" src={BookStoreLogo} alt="BookStoreLogo" />
+            <div className="signup-container-1">
+                <div className="signup-pic-container">
+                    <img className="signup-image" src={BookStoreLogo} alt="BookStoreLogo" />
                     <h3>ONLINE BOOK SHOPPING</h3>
                 </div>
 
-                <form className="container-2">
-                    <div className="container-3">
-                        <Link className="login"><p className="logintext">LOG IN</p></Link>
-                        <div className="signup"><p className="signuptext">SIGN UP</p></div>
+                <form className="signup-container-2">
+                    <div className="signup-container-3">
+                        <Link className="login"><p className="signup-logintext">LOG IN</p></Link>
+                        <div className="signup"><p className="signup-text">SIGN UP</p></div>
                     </div>
 
-                    <div className="container-4">
+                    <div className="signup-container-4">
 
-                        <label className="label1" for='fullname'>Full Name</label>
-                        <TextField className="tfield"
+                        <label className="signup-label1" for='fullname'>Full Name</label>
+                        <TextField className="signup-tfield"
                         //  label="Full Name"
-                         id='fullname' variant="outlined" autoComplete="off"/>
+                         id='signup-fullname' variant="outlined" autoComplete="off"/>
 
 
-                        <label className="label2" for='email'>Email id</label>
-                        <TextField className="tfield" 
+                        <label className="signup-label2" for='email'>Email id</label>
+                        <TextField className="signup-tfield" 
                         // label="Email id" 
-                        id='email' variant="outlined" autoComplete="off" />
+                        id='signup-email' variant="outlined" autoComplete="off" />
 
 
-                        <label className="label3" for='password'>Password</label>
-                        <TextField className="tfield" 
+
+                        <label className="signup-label3" for='password'>Password</label>
+                        <TextField className="signup-tfield" 
                         // label="Password" 
-                        id='password' variant="outlined" autoComplete="off"/>
+                        id='signup-password' variant="outlined" autoComplete="off"/>
 
 
-                        <label className="label4" for='mobile'>Mobile Number</label>
-                        <TextField className="tfield" 
+                        <label className="signup-label4" for='mobile'>Mobile Number</label>
+                        <TextField className="signup-tfield" 
                         // label="Mobile Number" 
-                        id='mobile' variant="outlined" autoComplete="off"/>
+                        id='signup-mobile' variant="outlined" autoComplete="off"/>
 
-                        <button className="button">Login</button>
+                        <button className="signup-login-button">Login</button>
                         {/* <button className="tfield">Signup</button> */}
 
                     </div>

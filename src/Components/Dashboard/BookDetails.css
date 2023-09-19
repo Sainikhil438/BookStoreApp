@@ -1,0 +1,251 @@
+.BookDetails-container1 {
+    /* background-color:green; */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.BookDetails-container2 {
+    /* background-color: orange; */
+    height: 80%;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.BookDetails-container3 {
+    /* background-color: yellow; */
+    height: 100%;
+    width: 5%;
+}
+
+.small-image1-div,
+.small-image2-div {
+    height: 10%;
+    width: 95%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-image1 {
+    height: 80%;
+    width: 80%;
+}
+
+.small-image2 {
+    height: 80%;
+    width: 80%;
+
+}
+
+.BookDetails-container4 {
+    background-color: white;
+    height: 100%;
+    width: 40%;
+}
+
+.main-book-image-div {
+    height: 80%;
+    width: 90%;
+    border: 2px solid grey;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-book-image {
+    height: 90%;
+    width: 75%;
+}
+
+.main-book-options {
+    /* background-color: orange; */
+    height: 15%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.mb-button-1 {
+    background-color: #A03037;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    height: 50%;
+    width: 47%;
+    font-size: medium;
+}
+
+.mb-button-2 {
+    background-color: black;
+    height: 50%;
+    width: 47%;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    font-size: medium;
+}
+
+.BookDetails-container5 {
+    /* background-color: yellow; */
+    height: 100%;
+    width: 60%;
+}
+.BookDetails-container5-1{
+    width:90%;
+    height:25%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    margin-top: 0px;
+    padding: 0px;
+}
+.book-title-div{
+    /* background-color: violet; */
+    height: 5vh;
+    width:53%;
+}
+.book-title{
+    font-size: 2vw;
+    font-weight: 450;
+    margin-top: 0px;
+}
+.author-name-div{
+    /* background-color: orange; */
+    height: 4vh;
+    width:25%;
+    margin-top: 0vh;
+}
+.author-name{
+    /* background-color: blue; */
+    font-size: 1.25vw;
+    /* width:20%; */
+    margin-top: 0px;
+    padding: 0px;
+    color: grey;
+}
+.stars-div{
+    /* background-color: violet; */
+    height: 5vh;
+    width:30%;
+    margin-left: 1vw;
+    display: flex;
+}
+.stars-rating{
+    background-color: green;
+    color: white;
+    /* margin-right: 2vw; */
+}
+.book-cost-div{
+    /* background-color: orange; */
+    height: 5vh;
+    width: 12vw;
+    margin-top: 0px;
+}
+.book-price{
+    font-size: 3.75vh;
+    margin-top: 0px;
+}
+.horizontal-1{
+    color: grey;
+}
+.BookDetails-container5-2{
+    margin-left: 1vw;
+}
+.Book-Details-title{
+    height: 4vh;
+    width: 7vw;
+}
+.book-title-details{
+    color:grey;
+}
+.book-description-details{
+    text-align: left;
+    margin-top: 0px;
+}
+.BookDetails-container5-3{
+    /* background-color: yellow; */
+    height: 60%;
+    width: 100%
+}
+.feedback-title-div{
+    /* background-color: orange; */
+    height:5vh;
+    width:30%;
+    margin-left: 1vw;
+}
+.feedback-title{
+    font-size: 1.4vw;
+}
+.rating-div{
+    background-color: #F5F5F5;
+    height:60%;
+    width:100%;
+}
+.rating-title{
+    /* background-color: orange; */
+    width:11vw;
+}
+.rating-stars-display{
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: space-around;
+    width:12vw;
+    margin-left: 2vw;
+}
+.rating-comment-section{
+    /* background-color: green; */
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* .comment-text-field{
+
+} */
+#comment-text-field-id{
+    background-color: white;
+    height: 7vh;
+    width:37vw;
+}
+.submit-button-div{
+    /* background-color: orange; */
+    height: 5vh;
+    width:41vw;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.submit-button{
+    height: 4vh;
+    width:6vw;
+    border: none;
+    background-color: #3371B5;
+    color: white;
+    border-radius: 3px;
+}
+.name-icon{
+    background-color: orange;
+}
+.individual-comment-1{
+    /* background-color: yellow; */
+    /* height: 6vh; */
+}
+.comment-div1{
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+}
+.individual-comment-1{
+    display: flex;
+}
+.comment-description{
+    text-align: left;
+}
