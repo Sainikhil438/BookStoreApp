@@ -1,0 +1,75 @@
+.order-outer-container{
+    height: 100vh;
+    width:100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.order-main-container{
+    height: 80%;
+    width:60%;
+    /* border:2px solid black; */
+}
+.order-container-1{
+    /* background-color: yellow; */
+    height:40%;
+    width:100%;
+}
+.order-image{
+    height: 100%;
+    width:30%;
+}
+.order-container-2{
+    /* background-color: orange; */
+    height: 20%;
+    width:100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.order-container-2-1{
+    /* background-color: violet; */
+    height: 90%;
+    width:35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.order-message{
+    margin-top: 0px;
+}
+.order-container-3{
+    /* background-color: bisque; */
+    height: 30%;
+    width:100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.order-container-3-1{
+    /* background-color: yellow; */
+    height: 90%;
+    width:90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+table, th, td {
+    border: 1px solid black;
+  }
+.order-container-4{
+    /* background-color: aqua; */
+    height: 10%;
+    width:100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.order-button-1{
+    background-color: #3371B5;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    height:50%;
+    width:20%;
+}

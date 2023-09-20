@@ -1,0 +1,110 @@
+.summary-main-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.summary-container{
+    border: 1px solid lightgray;
+    height: 40vh;
+    width:55vw;
+    margin-left: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.summary-subcontainer{
+    /* border: 1px solid black; */
+    height:80%;
+    width:90%; 
+}
+.summary-details-1{
+    /* background-color: yellow; */
+    height:25%;
+    width:100%;
+    display: flex;
+    align-items: self-start;
+}
+.order-summary-title{
+    font-size: medium;
+    font-weight: 500;
+}
+.summary-details-2{
+    /* background-color: violet; */
+    height:50%;
+    width:100%;
+    display: flex;
+}
+.summary-image-div{
+    /* background-color: yellow; */
+    height: 100%;
+    width:13%;
+    display: flex;
+}
+.summary-image{
+    height:85%;
+    width:70%;
+}
+.summary-book-details-div{
+    /* background-color: orange; */
+    height: 100%;
+    width:87%;
+    display: flex;
+    flex-direction: column;
+}
+.summary-book-details-1{
+    /* background-color: violet; */
+    height:25%;
+    width:100%;
+    display: flex;
+    align-items: center;
+}
+.summary-book-details-2{
+    /* background-color: wheat; */
+    height:25%;
+    width:100%;
+    display: flex;
+    align-items: center;
+}
+.summary-author-name{
+    color: lightgray;
+    font-size: small;
+}
+.summary-book-details-3{
+    /* background-color: azure; */
+    height:50%;
+    width:100%;
+    display: flex;
+}
+.summary-book-price{
+    /* background-color: violet; */
+    height:100%;
+    width:12%;
+    display: flex;
+}
+.summary-price-amount{
+    font-size: 2.4vh;
+}
+.summary-price-amount-2{
+    font-size: small;
+}
+.summary-details-3{
+    /* background-color: bisque; */
+    height:25%;
+    width:100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+/* .summary-button-div{
+    background-color: aqua;
+    height: 100%;
+} */
+.summary-button-1{
+    background-color: #3371B5;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    height:70%;
+    width:18%;
+}

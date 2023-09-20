@@ -7,17 +7,25 @@ import ActionCard from './Components/Dashboard/BookComponent';
 import ForgotpwdAppBar from './Components/Pages/ForgotPassword/ForgotpwdAppBar';
 import ForgotPassword from './Components/Pages/ForgotPassword/ForgotPassword';
 import BookDetails from './Components/Dashboard/BookDetails';
+import MyCartDetails from './Components/Dashboard/Cart/MyCartDetails';
+import OrderSummary from './Components/Dashboard/Cart/OrderSummary';
+import CustomerDetails from './Components/Dashboard/Cart/CustomerDetails';
+import OrderPlaced from './Components/Dashboard/Cart/OrderPlaced';
 
 function App() {
   return (
     <div className="App">
       <HeaderBar/>
       {/* <SignUp/> */}
-      {/* <SignIn/> */}
+      <SignIn/>
       {/* <ActionCard/> */}
       {/* <ForgotpwdAppBar/> */}
       {/* <ForgotPassword/> */}
-      <BookDetails/>
+      {/* <BookDetails/> */}
+      {/* <MyCartDetails/> */}
+      {/* <OrderSummary/> */}
+      {/* <CustomerDetails/> */}
+      {/* <OrderPlaced/> */}
     </div>
   );
 }

@@ -6,69 +6,53 @@ import { Link } from "@mui/material";
 import BookStoreLogo from "../../images/BookStoreLogo.png";
 
 
-class SignUp extends Component {
-    constructor(props){
-        super(props)
+// 
+function SignUp() {
+    return (
+        <div className="signup-container-1">
+            <div className="signup-pic-container">
+                <img className="signup-image" src={BookStoreLogo} alt="BookStoreLogo" />
+                <h3>ONLINE BOOK SHOPPING</h3>
+            </div>
 
-        this.state = {
-            fullname:"",
-            email:"",
-            password:"",
-            number:""
-        }
-
-        const handleButton = () =>
-        {
-            return "sai";
-        }
-    }
-    render() {
-        return (
-            <div className="signup-container-1">
-                <div className="signup-pic-container">
-                    <img className="signup-image" src={BookStoreLogo} alt="BookStoreLogo" />
-                    <h3>ONLINE BOOK SHOPPING</h3>
+            <form className="signup-container-2">
+                <div className="signup-container-3">
+                    <Link className="login"><p className="signup-logintext">LOG IN</p></Link>
+                    <div className="signup"><p className="signup-text">SIGN UP</p></div>
                 </div>
 
-                <form className="signup-container-2">
-                    <div className="signup-container-3">
-                        <Link className="login"><p className="signup-logintext">LOG IN</p></Link>
-                        <div className="signup"><p className="signup-text">SIGN UP</p></div>
-                    </div>
+                <div className="signup-container-4">
 
-                    <div className="signup-container-4">
-
-                        <label className="signup-label1" for='fullname'>Full Name</label>
-                        <TextField className="signup-tfield"
+                    <label className="signup-label1" for='fullname'>Full Name</label>
+                    <TextField className="signup-tfield"
                         //  label="Full Name"
-                         id='signup-fullname' variant="outlined" autoComplete="off"/>
+                        id='signup-fullname' variant="outlined" autoComplete="off" />
 
 
-                        <label className="signup-label2" for='email'>Email id</label>
-                        <TextField className="signup-tfield" 
+                    <label className="signup-label2" for='email'>Email id</label>
+                    <TextField className="signup-tfield"
                         // label="Email id" 
                         id='signup-email' variant="outlined" autoComplete="off" />
 
 
 
-                        <label className="signup-label3" for='password'>Password</label>
-                        <TextField className="signup-tfield" 
+                    <label className="signup-label3" for='password'>Password</label>
+                    <TextField className="signup-tfield"
                         // label="Password" 
-                        id='signup-password' variant="outlined" autoComplete="off"/>
+                        id='signup-password' variant="outlined" autoComplete="off" />
 
 
-                        <label className="signup-label4" for='mobile'>Mobile Number</label>
-                        <TextField className="signup-tfield" 
+                    <label className="signup-label4" for='mobile'>Mobile Number</label>
+                    <TextField className="signup-tfield"
                         // label="Mobile Number" 
-                        id='signup-mobile' variant="outlined" autoComplete="off"/>
+                        id='signup-mobile' variant="outlined" autoComplete="off" />
 
-                        <button className="signup-login-button">Login</button>
-                        {/* <button className="tfield">Signup</button> */}
+                    <button className="signup-login-button">Login</button>
+                    {/* <button className="tfield">Signup</button> */}
 
-                    </div>
-                </form>
-            </div>
-        )
-    }
+                </div>
+            </form>
+        </div>
+    );
 }
 export default SignUp;
