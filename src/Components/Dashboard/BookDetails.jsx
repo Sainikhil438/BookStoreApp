@@ -6,11 +6,21 @@ import StarBorderIcon from '@mui/icons-material/StarBorder';
 import TextField from '@mui/material/TextField';
 import Avatar from '@mui/material/Avatar';
 import Rating from '@mui/material/Rating';
+import { useNavigate } from "react-router-dom";
 
 
 export default function BookDetails() {
+
+    const navigate = useNavigate()
+    const handleOnClick=()=>
+    {
+        navigate("/mycartdetails")
+    }
     return (
         <div className="BookDetails-container1">
+            <div className="Book-display-heading">
+                    <p>Home/My cart</p>
+                </div>
             <div className="BookDetails-container2">
                 <div className="BookDetails-container3">
                     <div className="small-image1-div"><img className="small-image1" src={BookDisplay} /></div>
@@ -21,7 +31,7 @@ export default function BookDetails() {
                         <img className="main-book-image" src={BookDisplay} />
                     </div>
                     <div className="main-book-options">
-                        <button className="mb-button-1">ADD TO BAG</button>
+                        <button className="mb-button-1" onClick={handleOnClick}>ADD TO BAG</button>
                         <button className="mb-button-2">♥ WHISHLIST</button>
                     </div>
                 </div>

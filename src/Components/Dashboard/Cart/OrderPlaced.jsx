@@ -1,8 +1,14 @@
 import React from "react";
 import OrderImage from '../../images/OrderSuccessful.png';
 import './OrderPlaced.css';
+import { useNavigate } from "react-router-dom";
 
 export default function OrderPlaced() {
+
+    const navigate = useNavigate();
+    const onContinueButton = () =>{
+        navigate("/bookcomponent")
+    }
     return (
         <div className="order-outer-container">
             <div className="order-main-container">
@@ -36,7 +42,7 @@ export default function OrderPlaced() {
                     </div>
                 </div>
                 <div className="order-container-4">
-                    <button className="order-button-1">CONTINUE SHOPPING</button>
+                    <button className="order-button-1" onClick={onContinueButton}>CONTINUE SHOPPING</button>
                 </div>
             </div>
         </div>

@@ -10,7 +10,7 @@
     background-color: #f8f6f6;
     border-radius: 25px;
     width: 24vw;
-    height: 53vh;
+    height: 60vh;
     margin-top: 45vh;
     margin-bottom: 45vh;
 }
@@ -27,7 +27,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height:65vh;
+    height:70vh;
     width:25vw;
     box-shadow: white;
     border-radius: 7px;
@@ -59,8 +59,18 @@
     font-weight: bold;
     font-size: 1.35rem;
 }
-.signup-login-button{
-    /* background-color: rgba(189, 14, 14, 0.715); */
+/* .signup-login-button{
+    
+    background-color: #a03037;
+    color: white;
+    width: 20vw;
+    height: 6vh;
+    padding: 1vw;
+    margin:2vw;
+    margin-bottom: 5vh;
+    border-radius: 5px;
+} */
+#signup-login-button-id{
     background-color: #a03037;
     color: white;
     width: 20vw;
@@ -74,6 +84,30 @@
     width:20vw;
     margin-top: 2vh;
     /* height:8vh; */
+}
+.signup-tfield-1{
+    /* background-color: yellow; */
+    height: 12vh;
+    display: flex;
+    flex-direction: column;
+}
+.signup-tfield-2{
+    /* background-color: yellow; */
+    height: 11vh;
+    display: flex;
+    flex-direction: column;
+}
+.signup-tfield-3{
+    /* background-color: yellow; */
+    height: 11vh;
+    display: flex;
+    flex-direction: column;
+}
+.signup-tfield-4{
+    /* background-color: yellow; */
+    height: 11vh;
+    display: flex;
+    flex-direction: column;
 }
 .login{
     text-decoration: none;

@@ -1,9 +1,15 @@
 import React from "react";
 import './OrderSummary.css';
 import BookImage from '../../images/BookImage1.jpg';
+import { useNavigate } from "react-router-dom";
 
 
 export default function OrderSummary() {
+
+    const navigate = useNavigate();
+    const onCheckoutButton = () =>{
+        navigate("/orderplaced")
+    }
     return (
         <div className="summary-main-container">
             <div className="summary-container">
@@ -37,7 +43,7 @@ export default function OrderSummary() {
                     {/* <div className="summary-button-div">
                             <button className="summary-button-1">CHECKOUT</button>
                         </div> */}
-                        <button className="summary-button-1">CHECKOUT</button>
+                        <button className="summary-button-1" onClick={onCheckoutButton}>CHECKOUT</button>
                     </div>
                 </div>
             </div>

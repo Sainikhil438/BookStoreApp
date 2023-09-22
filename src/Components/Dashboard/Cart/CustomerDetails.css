@@ -6,9 +6,9 @@
 }
 .cd-main-container{
     border:1px solid lightgray;
-    height:65%;
-    width:55%;
-    margin-left: 15vw;
+    height:55vh;
+    width:55vw;
+    /* margin-left: 15vw; */
     margin-top: 5vh;
     display: flex;
     flex-direction: column;
@@ -78,7 +78,7 @@
 }
 .cd-container-3{
     /* background-color: orange; */
-    height:25%;
+    height:20%;
     width:100%;
     display: flex;
     /* justify-content: center; */
@@ -86,7 +86,7 @@
 }
 .cd-container-3-1{
     /* background-color: violet; */
-    height:90%;
+    height:70%;
     width:80%;
     margin-left: 1.7vw;
     display: flex;
@@ -94,6 +94,7 @@
     justify-content: center;
 }
 .cd-address{
+    height:70%;
     width:95%;
 }
 .cd-container-4{

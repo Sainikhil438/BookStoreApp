@@ -73,14 +73,22 @@
     flex-direction: row-reverse;
     margin:0vh;
 }
-.lbutton{
-    /* background-color: rgba(189, 14, 14, 0.715); */
+.login-tfield-1{
+    height: 12vh;
+    display: flex;
+    flex-direction: column;
+}
+.login-tfield-2{
+    height: 12vh;
+    display: flex;
+    flex-direction: column;
+}
+#lbutton-id{
     background-color: #a03037;
     color: white;
     width: 20vw;
     height: 6vh;
     padding: 1vw;
-    /* margin:2vw; */
     margin-top: 2vh;
     margin-bottom: 5vh;
     border-radius: 5px;
@@ -134,6 +142,12 @@
 }
 #lpassword{
     height:1.5vh;
+}
+#login1{
+    text-decoration: none;
+}
+.signup1{
+    text-decoration: none;
 }
 .login2{
     font-weight: bold;

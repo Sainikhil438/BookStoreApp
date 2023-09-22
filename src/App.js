@@ -11,13 +11,15 @@ import MyCartDetails from './Components/Dashboard/Cart/MyCartDetails';
 import OrderSummary from './Components/Dashboard/Cart/OrderSummary';
 import CustomerDetails from './Components/Dashboard/Cart/CustomerDetails';
 import OrderPlaced from './Components/Dashboard/Cart/OrderPlaced';
+import BookStoreRouter from './Components/Router/Router';
 
 function App() {
   return (
     <div className="App">
-      <HeaderBar/>
+      <BookStoreRouter/>
+      {/* <HeaderBar/> */}
       {/* <SignUp/> */}
-      <SignIn/>
+       {/* <SignIn/> */}
       {/* <ActionCard/> */}
       {/* <ForgotpwdAppBar/> */}
       {/* <ForgotPassword/> */}

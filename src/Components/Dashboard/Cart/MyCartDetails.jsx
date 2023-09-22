@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Book from '../../images/BookImage1.jpg';
 import './MyCartDetails.css';
 // import PinDropIcon from '@mui/icons-material/PinDrop';
@@ -6,9 +6,26 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 // import Avatar from '@mui/material/Avatar';
 import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
 import RemoveCircleOutlineOutlinedIcon from '@mui/icons-material/RemoveCircleOutlineOutlined';
+import { useNavigate } from "react-router-dom";
+import CustomerDetails from "./CustomerDetails";
+import OrderSummary from "./OrderSummary";
+
 
 
 export default function MyCartDetails() {
+
+    const [handleInput, setHandleInput] = useState(false);
+    const handleClickButton = () => {
+        setHandleInput(!handleInput)
+    }
+
+    const [orderInput, setOrderInput] = useState(false);
+    
+    function handleOrderButton(order) {
+        setOrderInput(order);
+    }
+
+
     return (
         <div className="cart-full-container">
             <div className="cart-main-container">
@@ -79,20 +96,26 @@ export default function MyCartDetails() {
                     </div>
                     <div className="cart-details-3">
                         <div className="cart-button-div">
-                            <button className="cart-button-1">PLACE ORDER</button>
+                            <button className="cart-button-1" onClick={handleClickButton}>PLACE ORDER</button>
                         </div>
                     </div>
                 </div>
-                <div className="cart-subcontainer-2">
-                    <div className="address-details-div">
-                        <p className="address-details">Address Details</p>
-                    </div>
-                </div>
-                <div className="cart-subcontainer-3">
-                    <div className="order-details-div">
-                        <p className="order-details">Order summary</p>
-                    </div>
-                </div>
+                {
+                    handleInput ? <CustomerDetails handleOrderButton={handleOrderButton} /> :
+                        <div className="cart-subcontainer-2">
+                            <div className="address-details-div">
+                                <p className="address-details">Address Details</p>
+                            </div>
+                        </div>
+                }
+                {
+                    orderInput ? <OrderSummary /> :
+                        <div className="cart-subcontainer-3">
+                            <div className="order-details-div">
+                                <p className="order-details">Order summary</p>
+                            </div>
+                        </div>
+                }
             </div>
         </div>
     );

@@ -3,9 +3,23 @@ import './CustomerDetails.css';
 import TextField from '@mui/material/TextField';
 import RadioButtonUncheckedOutlinedIcon from '@mui/icons-material/RadioButtonUncheckedOutlined';
 import RadioButtonCheckedOutlinedIcon from '@mui/icons-material/RadioButtonCheckedOutlined';
+import { useNavigate } from "react-router-dom";
+import OrderSummary from "./OrderSummary";
+import { useState } from "react";
 
 
-export default function CustomerDetails() {
+export default function CustomerDetails({handleOrderButton}) {
+
+    // const navigate = useNavigate();
+    // const onContinueButton = () =>{
+    //     navigate("/ordersummary")
+    // }
+
+    const [handleInput, setHandleInput] = useState(false);
+    const onContinueButton = () => {
+        setHandleInput(true)
+        handleOrderButton(handleInput)
+    }
     return (
         <div className="cd-outer-container">
             <div className="cd-main-container">
@@ -47,15 +61,17 @@ export default function CustomerDetails() {
                     <div className="cd-container-5-1">Type</div>
                     <div className="cd-container-5-2">
                         <RadioButtonUncheckedOutlinedIcon />Home &nbsp; &nbsp;
-                        <RadioButtonCheckedOutlinedIcon/>Work &nbsp; &nbsp;
+                        <RadioButtonCheckedOutlinedIcon />Work &nbsp; &nbsp;
                         <RadioButtonUncheckedOutlinedIcon />Other
                     </div>
                 </div>
-                <div className="cd-container-6">
-                    <div className="cd-container-6-1">
-                        <button className="cd-button-2">CONTINUE</button>
+
+                
+                    <div className="cd-container-6">
+                        <div className="cd-container-6-1">
+                            <button className="cd-button-2" onClick={onContinueButton}>CONTINUE</button>
+                        </div>
                     </div>
-                </div>
             </div>
         </div>
     );

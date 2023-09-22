@@ -5,8 +5,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
-
+.Book-display-heading{
+    margin-right: 68vw;
+}
 .BookDetails-container2 {
     /* background-color: orange; */
     height: 80%;

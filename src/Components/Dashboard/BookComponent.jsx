@@ -5,11 +5,20 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import BookLogo from '../images/BookImage1.jpg'
-import './BookComponent.css'
+import './BookComponent.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function ActionCard() {
+
+
+    const navigate = useNavigate()
+    const handleOnClick=()=>
+    {
+        navigate("/bookdetails")
+    }
+
     return (
-        <Card sx={{
+        <Card onClick={handleOnClick} sx={{
             maxWidth: 230,
             marginTop: 3,
             marginLeft: 5,

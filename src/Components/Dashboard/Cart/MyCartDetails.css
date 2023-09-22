@@ -1,7 +1,7 @@
-/* .cart-full-container{
-    height:100vh;
+.cart-full-container{
+    height:auto;
     width:100vw;
-} */
+}
 .cart-main-container{
     /* background-color: green; */
     height:63vh;
