@@ -1,0 +1,11 @@
+.outer-container-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.dashboard-div{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vw;
+}

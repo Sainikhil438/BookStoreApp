@@ -1,6 +1,6 @@
 import React from "react";
-import SIGNUP from '../Pages/SignUp/SignUp';
-import SIGNIN from '../Pages/SignIn/SignIn';
+import SignUp from '../Pages/SignUp/SignUp';
+import SignIn from '../Pages/SignIn/SignIn';
 import BookStoreDashboard from '../Dashboard/Dashboard'
 import { BrowserRouter,Routes, Route } from "react-router-dom";
 import ActionCard from "../Dashboard/BookComponent";
@@ -11,7 +11,8 @@ import MyCartDetails from "../Dashboard/Cart/MyCartDetails";
 import CustomerDetails from "../Dashboard/Cart/CustomerDetails";
 import OrderSummary from "../Dashboard/Cart/OrderSummary";
 import OrderPlaced from "../Dashboard/Cart/OrderPlaced";
-
+import AuthRoute from "./AuthRoute";
+import ProtectedRoute from "./ProtectedRoute";
 
 export default function BookStoreRouter()
 {
@@ -20,8 +21,8 @@ export default function BookStoreRouter()
             <BrowserRouter>
             <NavBarLayout>
             <Routes>
-                <Route exact path={"/"} element={<SIGNIN/>}/>
-                <Route path={"/signup"} element={<SIGNUP/>}/>
+                <Route exact path={"/"} element={<AuthRoute><SignIn/></AuthRoute>}/>
+                <Route path={"/signup"} element={<AuthRoute><SignUp/></AuthRoute>}/>
                 <Route path={"/forgotpassword"} element={<ForgotPassword/>}/>
                 <Route path={"/bookcomponent"} element={<ActionCard/>}/>
                 <Route path={"/bookdetails"} element={<BookDetails/>}/>

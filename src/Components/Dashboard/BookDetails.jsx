@@ -1,15 +1,23 @@
 import React from "react";
-import BookDisplay from '../images/BookImage1.jpg'
+import BookDisplay from '../images/BookImage1.jpg';
 import image2 from '../images/Image46.png'
 import './BookDetails.css'
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import TextField from '@mui/material/TextField';
+import { useState } from "react";
 import Avatar from '@mui/material/Avatar';
 import Rating from '@mui/material/Rating';
 import { useNavigate } from "react-router-dom";
+import AddToBag from "./Cart/AddToBag";
 
 
 export default function BookDetails() {
+
+    const [bagInput, setBagInput] = useState(false);
+    const handleAddToBag = () => {
+        setBagInput(!bagInput)
+    }
+
 
     const navigate = useNavigate()
     const handleOnClick=()=>
@@ -31,7 +39,12 @@ export default function BookDetails() {
                         <img className="main-book-image" src={BookDisplay} />
                     </div>
                     <div className="main-book-options">
-                        <button className="mb-button-1" onClick={handleOnClick}>ADD TO BAG</button>
+
+                        {
+                            bagInput ? <AddToBag/> :
+                        <button className="mb-button-1" onClick={handleAddToBag}>ADD TO BAG</button>
+
+                        }
                         <button className="mb-button-2">♥ WHISHLIST</button>
                     </div>
                 </div>

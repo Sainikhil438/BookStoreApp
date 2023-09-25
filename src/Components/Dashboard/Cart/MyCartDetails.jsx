@@ -25,6 +25,7 @@ export default function MyCartDetails() {
         setOrderInput(order);
     }
 
+    
 
     return (
         <div className="cart-full-container">
@@ -72,9 +73,7 @@ export default function MyCartDetails() {
                             </div>
                             <div className="cart-book-details-4">
                                 <div className="cart-number-change">
-                                    {/* <Avatar
-                                    sx={{ backgroundColor: "white", border: "1px solid lightgray", color: "black", width: 25, height: 25 }}>
-                                    -</Avatar> */}
+                                    
                                     <RemoveCircleOutlineOutlinedIcon
                                         sx={{ color: "lightgray", width: 30, height: 30 }}
                                     />
@@ -84,9 +83,6 @@ export default function MyCartDetails() {
                                     <AddCircleOutlineOutlinedIcon
                                         sx={{ color: "lightgray", width: 30, height: 30 }}
                                     />
-                                    {/* <Avatar
-                                    sx={{ backgroundColor: "white", border: "1px solid lightgray", color: "black", width: 25, height: 25 }}>
-                                    +</Avatar> */}
                                 </div>
                                 <div className="remove-description">
                                     <p>Remove</p>
@@ -94,11 +90,14 @@ export default function MyCartDetails() {
                             </div>
                         </div>
                     </div>
+
+                    { handleInput ? "" : 
                     <div className="cart-details-3">
                         <div className="cart-button-div">
                             <button className="cart-button-1" onClick={handleClickButton}>PLACE ORDER</button>
                         </div>
-                    </div>
+                    </div> 
+                    }
                 </div>
                 {
                     handleInput ? <CustomerDetails handleOrderButton={handleOrderButton} /> :

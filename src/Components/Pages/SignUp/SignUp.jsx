@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import BookStoreLogo from "../../images/BookStoreLogo.png";
 import { useState } from "react";
 import Button from "@mui/material/Button";
+import { signUp } from "../../Services/UserServices";
 
 
 
@@ -15,7 +16,7 @@ function SignUp() {
     const fullnameRegex = /^[a-zA-Z ]{2,40}$/;
     const emailRegex = /^[a-z]{3,}(.[0-9a-z]*)?@([a-z]){2,}.[a-z]+(.in)*$/;
     const passwordRegex = /^.*(?=.{8,})(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+=]).*$/;
-    const mobilenumberRegex = /^\d{10}$/;
+    const mobilenumberRegex = /^[6-9]\d{9}$/;
 
     const [data, setData] = useState({ fullname: "",email:"", password:"", mobilenumber:""});
     const [errorMessage, setErrorMessage] = useState({ fullnameError: false, fullnameHelper: "", emailError: false, emailHelper: "", passwordError:"", passwordHelper:"", mobilenumberError:"", mobilenumberHelper:""})
@@ -53,6 +54,11 @@ function SignUp() {
             setErrorMessage((prevState) => ({ ...prevState, mobilenumberError: true, mobilenumberHelper: "Enter correct Mobile Number", }));
         } else {
             setErrorMessage((prevState) => ({ ...prevState, mobilenumberError: false, mobilenumberHelper: "", }));
+        }console.log(data);
+
+        if (fullnameTest === emailTest === passwordTest === mobilenumberTest === true) {
+            let response = await signUp(data);
+            console.log(response);
         }
 
     }

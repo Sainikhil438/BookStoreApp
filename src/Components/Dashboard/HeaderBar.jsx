@@ -18,7 +18,8 @@ import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import logo from '../images/OpenBook.jpeg';
-import './HeaderBar.css'
+import './HeaderBar.css';
+import { useNavigate } from 'react-router-dom';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -62,9 +63,23 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
 }));
 
+
 export default function HeaderBar() {
+
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+
+    const navigate = useNavigate();
+    const handleLogout = () => {
+        if (localStorage.key) {
+            localStorage.removeItem("AccessToken")
+        }
+        navigate("/")
+    }
+
+    const handleClickCart = () => {
+        navigate("/mycartdetails")
+    }
 
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -104,7 +119,7 @@ export default function HeaderBar() {
             onClose={handleMenuClose}
         >
             <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-            <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+            <MenuItem onClick={handleLogout}>LogOut</MenuItem>
         </Menu>
     );
 
@@ -125,7 +140,7 @@ export default function HeaderBar() {
             open={isMobileMenuOpen}
             onClose={handleMobileMenuClose}
         >
-            
+
             <MenuItem onClick={handleProfileMenuOpen}>
                 <IconButton
                     size="large"
@@ -146,7 +161,7 @@ export default function HeaderBar() {
         <Box sx={{ flexGrow: 1 }} className='headerbar-box'>
             <AppBar position="static" className='headerbar-appbar'>
                 <Toolbar className='headerbar-toolbar'>
-                    
+
 
                     <img className='headerbar-logo' src={logo} alt="Bookstore logo" />
                     <Typography
@@ -187,9 +202,9 @@ export default function HeaderBar() {
 
                                 </div>
 
-                                
+
                             </IconButton>
-                            
+
                             <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
                                 <IconButton
                                     size="large"
@@ -206,7 +221,7 @@ export default function HeaderBar() {
                                 size="large"
                                 color="inherit"
                             >
-                                <div className='headerbar-cart-container'>
+                                <div className='headerbar-cart-container' onClick={handleClickCart}>
                                     <div className='headerbar-cart-icon'>
                                         <ShoppingCartOutlinedIcon color="white">
                                         </ShoppingCartOutlinedIcon>

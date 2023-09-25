@@ -1,0 +1,16 @@
+.add-items{
+    /* background-color: yellow; */
+    height: 50%;
+    width: 47%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.book-quantity{
+    height: 70%;
+    width:30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid lightgray;
+}

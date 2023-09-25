@@ -6,6 +6,7 @@ import BookStoreLogo from "../../images/BookStoreLogo.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { signIn } from "../../Services/UserServices";
 
 
 
@@ -38,10 +39,13 @@ function SignIn() {
             setErrorLogin((prevState) => ({ ...prevState, passwordError: true, passwordHelper: "Enter correct Password", }));
         } else {
             setErrorLogin((prevState) => ({ ...prevState, passwordError: false, passwordHelper: "", }));
-        }
+        }console.log(logindata);
 
         if (emailTest && passwordTest) {
-           navigate("/bookcomponent");
+            let response = await signIn(logindata);
+            console.log(response);
+            localStorage.setItem("AccessToken", response.data.result.accessToken);
+            navigate("/dashboard");
         }
     }
 

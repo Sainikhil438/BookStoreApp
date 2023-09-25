@@ -8,7 +8,7 @@ import BookLogo from '../images/BookImage1.jpg'
 import './BookComponent.css';
 import { useNavigate } from 'react-router-dom';
 
-export default function ActionCard() {
+export default function ActionCard({userBooks}) {
 
 
     const navigate = useNavigate()
@@ -42,15 +42,26 @@ export default function ActionCard() {
                     </div>
                     <CardContent>
                         <div className='details'>
-                            <p className='title'>Don't Make Me Think</p>
-                            <p className='author'>by Steve Krug</p>
+                            <p className='title'>
+                                {/* Don't Make Me Think */}
+                                {userBooks.bookName}
+                                </p>
+                            <p className='author'>by {userBooks.author}
+                            {/* Steve Krug */}
+                            </p>
                             <div><br></br>
                                 <span className='stars'>4.5 &#9733;</span>
                                 <span>(20)</span>
                             </div><br></br>
                             <span className='cost'>
-                                <b>Rs.1500</b>
-                                <s>Rs.2000</s>
+                                <b>
+                                    {/* Rs.1500 */}
+                                    Rs.{userBooks.discountPrice}
+                                 </b>
+                                <s>
+                                    {/* Rs.2000 */}
+                                    Rs.{userBooks.price}
+                                </s>
                             </span>
                         </div>
                     </CardContent>
