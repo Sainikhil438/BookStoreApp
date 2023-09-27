@@ -9,13 +9,15 @@ import Avatar from '@mui/material/Avatar';
 import Rating from '@mui/material/Rating';
 import { useNavigate } from "react-router-dom";
 import AddToBag from "./Cart/AddToBag";
+import MyCartDetails from "./Cart/MyCartDetails";
+import { createContext } from "react";
 
-
-export default function BookDetails() {
+export const BookContext=createContext();
+export default function BookDetails({getparticularbook, setGetBook}) {
 
     const [bagInput, setBagInput] = useState(false);
     const handleAddToBag = () => {
-        setBagInput(!bagInput)
+        setBagInput(true)
     }
 
 
@@ -24,10 +26,24 @@ export default function BookDetails() {
     {
         navigate("/mycartdetails")
     }
+
+    const handleToHome = () =>{
+        // navigate("/dashboard")
+        setGetBook(false)
+    }
+    
+    const selectedbook={
+        bookName:getparticularbook.bookName,
+        author:getparticularbook.author,
+        price:getparticularbook.price,
+        discountPrice:getparticularbook.discountPrice
+    }
+
     return (
         <div className="BookDetails-container1">
             <div className="Book-display-heading">
-                    <p>Home/My cart</p>
+                    <p onClick={handleToHome}>Home</p>
+                    <p>/Book</p>
                 </div>
             <div className="BookDetails-container2">
                 <div className="BookDetails-container3">
@@ -51,16 +67,16 @@ export default function BookDetails() {
                 <div className="BookDetails-container5">
                     <div className="BookDetails-container5-1">
                         {/* <p className="main-book-description1">Don't Make Me Think</p> */}
-                        <div className="book-title-div"><p className='book-title'>Don't Make Me Think</p></div>
-                        <div className="author-name-div"><p className='author-name'>by Steve Krug</p></div>
+                        <div className="book-title-div"><p className='book-title'>{getparticularbook.bookName}</p></div>
+                        <div className="author-name-div"><p className='author-name'>by {getparticularbook.author}</p></div>
                         <div className="stars-div"><br></br>
-                            <span className='stars-rating'>4.5 &#9733;</span>
-                            <span>(20)</span>
+                            <span className='stars-rating'>4.5 &#9733;</span>&nbsp;
+                            <span>({getparticularbook.quantity})</span>
                         </div><br></br>
                         <div className="book-cost-div">
                             <span className='cost-of-book'>
-                                <b className="book-price">Rs.1500</b>
-                                <s>Rs.2000</s>
+                                <b className="book-price">Rs.{getparticularbook.discountPrice}</b>
+                                <s>Rs.{getparticularbook.price}</s>
                             </span>
                         </div>
                     </div>
@@ -70,8 +86,7 @@ export default function BookDetails() {
                             <p className="book-title-details">&#8226; Book Details</p>
                         </div>
                         <div className="Book-Details-description">
-                            <p className="book-description-details">Since Don’t Make Me Think was first published in 2000, hundreds of thousands of Web designers and developers have relied on usability guru Steve Krug’s guide to help them understand the principles of intuitive navigation and information design.
-                                Now Steve returns with fresh perspective to reexamine the principles that made Don’t Make Me Think a classic–with updated examples and a new chapter on mobile usability.</p>
+                            <p className="book-description-details">{getparticularbook.description}</p>
                         </div>
                     </div>
                     <hr className="horizontal-1" />
@@ -125,6 +140,7 @@ export default function BookDetails() {
                     </div>
                 </div>
             </div>
+
         </div>
     );
 }

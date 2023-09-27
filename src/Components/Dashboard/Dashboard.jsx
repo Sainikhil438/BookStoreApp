@@ -17,7 +17,9 @@ import './Dashboard.css'
 function BookStoreDashboard() {
 
     const [userBook, setUserBook] = useState([]);
+    const [BookSelected, setBookSelected] = useState()
 
+    const [getBook, setGetBook] = useState(false);
     const retrieveAllBooks = async () => {
         let response = await RetrieveBooks();
         console.log(response.data.result);
@@ -27,14 +29,28 @@ function BookStoreDashboard() {
     useEffect(() => {
         retrieveAllBooks()
     }, []);
+
+    const displayAllBooks = () => {
+        return userBook.map((book) => (
+
+            <div key={book._id} className="book-card-div" >
+                <ActionCard
+                    getbooks={book}
+                    onParticularBook={setBookSelected}
+                    setGetBook={setGetBook}
+                />
+                {console.log("books",  book)}
+            </div >)
+        )
+    }
+
     return (
         <div className="outer-container-div">
             <div className="dashboard-div">
-                {
-                    userBook.map((userBooks) =>
-                        <ActionCard _id={userBooks._id} userBooks={userBooks} />
-                    )
-                }
+
+            {getBook?<BookDetails getparticularbook={BookSelected} setGetBook={setGetBook}/>:displayAllBooks()}
+            {/* {BookSelected?<BookDetails getparticularbook={BookSelected}/>:displayAllBooks()} */}
+                
             </div>
         </div>
     );

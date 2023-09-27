@@ -20,6 +20,10 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 import logo from '../images/OpenBook.jpeg';
 import './HeaderBar.css';
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+// import UserContext from "../Dashboard/Cart/AddToBag";
+import { UserContext } from './Cart/AddToBag';
+
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -63,8 +67,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
 }));
 
-
 export default function HeaderBar() {
+    // const contextComponent = useContext(UserContext);
+    const contextValue = useContext(UserContext);
 
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -155,14 +160,14 @@ export default function HeaderBar() {
                 <p>Profile</p>
             </MenuItem>
         </Menu>
-    );
 
+    );
+    
+    // console.log("This is " + contextValue )
     return (
         <Box sx={{ flexGrow: 1 }} className='headerbar-box'>
-            <AppBar position="static" className='headerbar-appbar'>
+            <AppBar position="fixed" className='headerbar-appbar'>
                 <Toolbar className='headerbar-toolbar'>
-
-
                     <img className='headerbar-logo' src={logo} alt="Bookstore logo" />
                     <Typography
                         variant="h6"
@@ -223,9 +228,13 @@ export default function HeaderBar() {
                             >
                                 <div className='headerbar-cart-container' onClick={handleClickCart}>
                                     <div className='headerbar-cart-icon'>
-                                        <ShoppingCartOutlinedIcon color="white">
-                                        </ShoppingCartOutlinedIcon>
+                                        <Badge badgeContent={contextValue}>
+                                            <ShoppingCartOutlinedIcon color="white"/>
+                                            {/* </ShoppingCartOutlinedIcon> */}
+                                        </Badge>
+
                                     </div>
+
                                     <div>
                                         <p className='headerbar-cart'>Cart</p>
                                     </div>

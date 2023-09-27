@@ -8,16 +8,19 @@ import BookLogo from '../images/BookImage1.jpg'
 import './BookComponent.css';
 import { useNavigate } from 'react-router-dom';
 
-export default function ActionCard({userBooks}) {
+export default function ActionCard({getbooks,onParticularBook,setGetBook}) {
 
 
     const navigate = useNavigate()
     const handleOnClick=()=>
     {
-        navigate("/bookdetails")
+        onParticularBook(getbooks);
+        setGetBook(true)
+        // navigate("/bookdetails")
     }
 
     return (
+        <div className="book-component-div">
         <Card onClick={handleOnClick} sx={{
             maxWidth: 230,
             marginTop: 3,
@@ -44,23 +47,23 @@ export default function ActionCard({userBooks}) {
                         <div className='details'>
                             <p className='title'>
                                 {/* Don't Make Me Think */}
-                                {userBooks.bookName}
+                                {getbooks.bookName}
                                 </p>
-                            <p className='author'>by {userBooks.author}
+                            <p className='author'>by {getbooks.author}
                             {/* Steve Krug */}
                             </p>
                             <div><br></br>
                                 <span className='stars'>4.5 &#9733;</span>
-                                <span>(20)</span>
+                                <span>({getbooks.quantity})</span>
                             </div><br></br>
                             <span className='cost'>
                                 <b>
                                     {/* Rs.1500 */}
-                                    Rs.{userBooks.discountPrice}
+                                    Rs.{getbooks.discountPrice}
                                  </b>
                                 <s>
                                     {/* Rs.2000 */}
-                                    Rs.{userBooks.price}
+                                    Rs.{getbooks.price}
                                 </s>
                             </span>
                         </div>
@@ -69,5 +72,6 @@ export default function ActionCard({userBooks}) {
                 </CardActionArea>
             </div>
         </Card>
+        </div>
     );
 }

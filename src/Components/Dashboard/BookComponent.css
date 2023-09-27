@@ -1,6 +1,10 @@
+/* .book-component-div{
+ background-color: yellow;
+} */
 .container-1 {
     /* width: 235px; */
     /* height: 275px; */
+    
     height:40vh;
     width:35vw;
 }

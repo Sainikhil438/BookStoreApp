@@ -22,7 +22,7 @@ export default function BookStoreRouter()
             <NavBarLayout>
             <Routes>
                 <Route exact path={"/"} element={<AuthRoute><SignIn/></AuthRoute>}/>
-                <Route path={"/signup"} element={<AuthRoute><SignUp/></AuthRoute>}/>
+                <Route path={"/signup"} element={<SignUp/>}/>
                 <Route path={"/forgotpassword"} element={<ForgotPassword/>}/>
                 <Route path={"/bookcomponent"} element={<ActionCard/>}/>
                 <Route path={"/bookdetails"} element={<BookDetails/>}/>
